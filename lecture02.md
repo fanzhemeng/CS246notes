@@ -42,27 +42,27 @@
 	1. `.` (DOT) represents the current directory
 	2. `..` (DOT DOT) refers to the parent directory of the current dir
 
-				e.g. current dir is /home/nanaeem/cs246/1151
+  	  e.g. current dir is /home/nanaeem/cs246/1151
 
-					`$> cd /home/naneem/cs246` 
+	  `$> cd /home/naneem/cs246` 
 
-					`$> cd ..`
-
-					`$> cd ../1155`
-
-					Grandparent? `$> cd ../..`
+	  `$> cd ..`
+	  
+	  `$> cd ../1155`
+	  
+	  Grandparent? `$> cd ../..`
 
 	3. `~` (tilde) is the home directory
 
-				e.g. `$> cd ~/cs241`
-
-					 `$> cd ~`
-
-					 `$> cd ` also goes to the home directory
+	  e.g. `$> cd ~/cs241`
+	  
+	  `$> cd ~`
+	  
+	  `$> cd ` also goes to the home directory
 
 	4. `~userid` changes into userids home directory
 
-				e.g. `$> cd ~nanaeem`
+	  e.g. `$> cd ~nanaeem`
 
 	5. `$> cd -` changes to the last directory you were in
 
@@ -78,11 +78,11 @@
 	  A: The shell notices the globbing pattern, performs the wildcard substitution, and replaces the 
 		   glob with the results.
 
-	tab does the auto-completion.
+	* tab does the auto-completion.
 
-	`$> echo` do not know what echo does yet.....
+	* `$> echo` do not know what echo does yet.....
 
-	single or double quote for *.txt, i.e. to suppress wildcard matching
+	* single or double quote for *.txt, i.e. to suppress wildcard matching
 
   * Examples:
 
