@@ -18,16 +18,17 @@
 					1151	1155		(discussed in last lecture)
 ```
 
-### PATH: specify the location of any file in the file system
+### PATH
+  * path specifies the location of any file in the file system
   * Absolute Path: a path that starts at the root directory
 
-		`/bin` : the bin dir inside /
+	`/bin` : the bin dir inside /
 
-		`/usr/bin` : the bin dir under usr under /
+	`/usr/bin` : the bin dir under usr under /
 	
   * Current Directory: the directory you are currently sitting in
 
-		`$> pwd` shows current working directory
+	`$> pwd` shows current working directory
 	
   * Relative Path: specify a file location relative to the current directory
 
