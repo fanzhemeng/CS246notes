@@ -29,11 +29,11 @@ genenral form involving redirection: `command args < input > output 2> error`
 
 eg1. How mang words in the first 20 lines of sample.txt?
 
-	`$> head -20 sample.txt > temp`
+`$> head -20 sample.txt > temp`
 
-	`$> wc -w <temp`
+`$> wc -w <temp`
 
-	commands above will create a temp file , but if using pipe:
+commands above will create a temp file , but if using pipe:
 
 * Pipe: connect the output of one process to the input of the next
 
@@ -44,9 +44,9 @@ eg1. How mang words in the first 20 lines of sample.txt?
 eg2. Suppose files words1.txt and words2.txt contains list of words one per line.
 Print a duplicate free list of all words.
 
-	`$> cat words*.txt | sort | uniq`
+`$> cat words*.txt | sort | uniq`
 	
-	Note that  These are called linux command pipelines
+Note that  These are called linux command pipelines
 
 ## Pattern Matching Within Files
 * egrep
