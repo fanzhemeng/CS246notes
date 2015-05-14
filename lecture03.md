@@ -41,9 +41,7 @@ commands above will create a temp file , but if using pipe:
 
 sample.txt -->	head  --> stdout (20 lines) --> wc --> answer
 
-in this example, `$> head -20 sample.txt | wc -w`
-
-or, `$> cat sample.txt | head -20 | wc -w`
+in this example, `$> head -20 sample.txt | wc -w`, or `$> cat sample.txt | head -20 | wc -w`
 
 eg2. Suppose files words1.txt and words2.txt contains list of words one per line.
 Print a duplicate free list of all words.
@@ -60,7 +58,7 @@ Note that  These are called linux command pipelines
 
 `$> egrep pattern files` ouputs lines that contain a string that match the pattern
 
-	- e.g. Print all lines from index.shtml that contain cs246.
+e.g. Print all lines from index.shtml that contain cs246.
 			
 ```
 			`$> egrep cs246 index.shtml`
@@ -81,19 +79,20 @@ Note that  These are called linux command pipelines
 	- e.g. `"(cs)*246"` represents 246, cs246, cscs246, ...
 
 * `.` (DOT) represents any one symbol
-	- e.g. `"cs.*246"`
+	- e.g. 
+	`"cs.*246"`
 
-`"^cs246"` represents lines starting with cs246
+	`"^cs246"` represents lines starting with cs246
 
-`"cs246$"` represents lines ending with cs246
+	`"cs246$"` represents lines ending with cs246
 
-`"^cs246.*cs246$"`
+	`"^cs246.*cs246$"`
 
 * `\` is the escape character
 
-`"\."` represents a line that contains an actual dot
+	`"\."` represents a line that contains an actual dot
 
 * `+` means 1 or more of the proceeding sub-pattern
 
-e.g. `".+"`, `".(.)*"`
+	e.g. `".+"`, `".(.)*"`
 
