@@ -32,7 +32,9 @@ Two kinds of Shells:
   - Bourne Again shell (bash)
 
 `$> echo $0` show the kind of shell is being used
+
 `- bash`
+
 `$> bash` change to bash
 
 ## Linux File System
