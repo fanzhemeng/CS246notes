@@ -9,11 +9,9 @@ genenral form involving redirection: `command args < input > output 2> error`
 * In Unix/Linux systems,
 
 	```
-
 																														    |--> standard output stream (stdout)
 		  stanard input stream (stdin) --> prog / process command --| 
 																														    |--> standard error (stderr)
-
 	```
 
 	* stdin by default: keyboard
@@ -31,24 +29,24 @@ genenral form involving redirection: `command args < input > output 2> error`
 
 eg1. How mang words in the first 20 lines of sample.txt?
 
-`$> head -20 sample.txt > temp`
+	`$> head -20 sample.txt > temp`
 
-`$> wc -w <temp`
+	`$> wc -w <temp`
 
-commands above will create a temp file , but if using pipe:
+	commands above will create a temp file , but if using pipe:
 
 * Pipe: connect the output of one process to the input of the next
 
-sample.txt -->	head  --> stdout (20 lines) --> wc --> answer
+	sample.txt -->	head  --> stdout (20 lines) --> wc --> answer
 
-in this example, `$> head -20 sample.txt | wc -w`, or `$> cat sample.txt | head -20 | wc -w`
+	in this example, `$> head -20 sample.txt | wc -w`, or `$> cat sample.txt | head -20 | wc -w`
 
 eg2. Suppose files words1.txt and words2.txt contains list of words one per line.
 Print a duplicate free list of all words.
 
-`$> cat words*.txt | sort | uniq`
+	`$> cat words*.txt | sort | uniq`
 	
-Note that  These are called linux command pipelines
+	Note that  These are called linux command pipelines
 
 ## Pattern Matching Within Files
 * egrep
@@ -61,15 +59,15 @@ Note that  These are called linux command pipelines
 e.g. Print all lines from index.shtml that contain cs246.
 			
 ```
-			`$> egrep cs246 index.shtml`
-			`$> egrep cs246 index.shtml | wc -l`
-			`$> egrep 'cs246|CS246' index.shtml | wc -l`
-			- Note that without the quotes, the command above will not work
-			`$> egrep "(cs|CS)246" index.shtml | wc -l`
-			`$> egrep "(c|C)(s|S)246" index.shtml | wc -l`
-			`$> egrep "[cC][sS]246" index.shtml | wc -l`
-			- Note that `[abcd]` is the short hand for `a|b|c|d`
-			- `[^abcd]` choose any one symbol but not the ones in the set.
+	`$> egrep cs246 index.shtml`
+	`$> egrep cs246 index.shtml | wc -l`
+	`$> egrep 'cs246|CS246' index.shtml | wc -l`
+	- Note that without the quotes, the command above will not work
+	`$> egrep "(cs|CS)246" index.shtml | wc -l`
+	`$> egrep "(c|C)(s|S)246" index.shtml | wc -l`
+	`$> egrep "[cC][sS]246" index.shtml | wc -l`
+	- Note that `[abcd]` is the short hand for `a|b|c|d`
+	- `[^abcd]` choose any one symbol but not the ones in the set.
 ```
 
 * `?` represent 0 or 1 of the previous sub-pattern
