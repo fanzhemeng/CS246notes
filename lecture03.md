@@ -1,15 +1,19 @@
 # Lecture 03
 
 difference between `$> wc sample.txt` and `$> wc < sample.txt`:
+
 	* the name of the file `sample.txt` will not be showed if using input redirection
 
 genenral form involving redirection: `command args < input > output 2> error`
+
 	- In Unix/Linux systems,
 
 	```
+
 																														    |--> standard output stream (stdout)
 		  stanard input stream (stdin) --> prog / process command --| 
 																														    |--> standard error (stderr)
+
 	```
 
 		* stdin by default: keyboard
