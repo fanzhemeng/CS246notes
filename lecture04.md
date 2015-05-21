@@ -87,23 +87,22 @@ Alternatively, we can do `$> chmod 666 file `, and note that 744 is common.
 ## Shell Variables
 ### define a variable
 `$> x=1`  (note that there is no whitespaces)  
-`$> echo $x`
-
+`$> echo $x`  
 Then output: `1`
 
-Note: 
-1. do not use `$` when setting variables
-2. use `$` to access the value of the variable
-3. no space in variable definition
+Note:   
+1.do not use `$` when setting variables  
+2.use `$` to access the value of the variable  
+3.no space in variable definition  
 
 We can also set a variable as a directory path:   
 `$> scdir=~/user/nanaeem/1155`   
-`$> ls $ecdir`  
+`$> ls $scdir`  
 Here, note that `$> echo "$scdir"` show the value of scdir, while `$> echo '$scdir'` 
 see $scdir as string.
 
 #### Example  
-`$> x=`pwd``  
+``$> x=`pwd```  
 `$> cd ..`  
 `$> echo $x`  
 The output of the above commands indicates x is a variable. That is, once set, it wont 
@@ -118,7 +117,7 @@ Or you can set a variable `$> mybasic=./basic` and run `$> $mybasic`.
 
 Script name and its arguments can be called by $N where n is a non-negative integer.  
 `$> ./myscript val1 val2 ... valN`  
-call:	 `$0`		`$1`	`$2` ... `$N`  
+call:	  `$0`     `$1`	   `$2` ... `$N`  
 
 #### Example
 ```
