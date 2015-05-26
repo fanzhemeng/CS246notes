@@ -47,17 +47,17 @@ int main() {    # return must be int, which is a status code
 }
 ```
 
-Note that `stdio.h` (printf) are still available in C++, but not encouraged, 
-and it will be detected by Marmoset. So **FORBIDDEN**.
+Note that `stdio.h` (printf) is still available in C++, but not encouraged 
+to use, and it will be detected by Marmoset. So **FORBIDDEN**.
 
 ### C++ approach  
 * include iostream
-	* variable  `std::cout`
+	* variable  `std::cout`   
 	  e.g. `std::cout << "Nomair" << std::endl`  
 		* std is a namespace, in which there are cout and endl
 		* endl is the newline character regarding your systems
 
-* compiling
+* compiling   
 To compile a C++ course code file,  
 ``` bash
 $> g++ prog.cc -o prog		# -o create a executable file called prog
@@ -65,7 +65,7 @@ $> ./prog
 ```
 
 Note that `$> g++ prog.cc` automatically create an executable file, called 
-a.out, in the current dir.
+a.out if did not specify the name, in the current dir.
 
 When you include `iostream`, you import 3 variables, 
 * cout - send to stdout
@@ -107,12 +107,13 @@ rely on the output returned in this case.
 Ctrl+D means end of file (EOF). (same as in CS136)
 
 Now we want to detect if read fails or not.  
-If a read fails  
-* for wahtever reason below, 
-	* read something unexpected, or
+If a read fails 
+
+* for wahtever reason below,    
+	* read something unexpected, or   
 	* encountered EOF (Ctrl+D)   
-	then `cin.fail()` is true.
-* due to EOF, then `cin.eof()` is true
+	then `cin.fail()` is true.   
+* due to EOF, then `cin.eof()` is true   
 
 #### Example  (C++/io/readInts.cc)
 Read all ints from stdin and echo to stdout, and stop if a non-int is encountered or EOF is hit.
