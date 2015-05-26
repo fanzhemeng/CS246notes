@@ -9,7 +9,8 @@
 Note: status code `0` if success, non-zero if failed
 
 #### GoodPassword Example 
-'''
+
+```bash
 #!/bin/bash
 egrep "^$1$" /usr/share/dict/words > /dev/null
 if [ $? -eq 0 ] ; then
@@ -17,13 +18,14 @@ if [ $? -eq 0 ] ; then
 else 
 		echo "Maybe a good password"
 fi
-'''
+```
 
-#### More commands involving if
+#### More commands involving `if`  
 * check if a file exists  
-  `if [ -e filename ]
+  `if [ -e filename ]`
 * general format for `if` statement:  
-  ```
+
+	```bash
 	if [ condition ] ; then 
 			...
 	elif [ condition ] ; then
@@ -32,7 +34,8 @@ fi
 			...
 	fi
 	```
-Note that the whitespaces around condition are immportant!! It is because `[` if 
+
+Note that the whitespaces around condition are immportant!! It is because `[` is 
 treated as a command here, and `]` is its last argument, acting like a terminator.
 
 * comparisons
@@ -41,17 +44,17 @@ treated as a command here, and `]` is its last argument, acting like a terminato
 	* logic: `-a` for and, `-o` for or, `!` for not
 
 #### Simple Example 
-```
+```bash
 $> [ -e basic ]
 $> echo $?
 ```
 
-```
+```bash
 $> [ 1 -eq 2 ] 
 $> echo $?
 ```
 #### More Complicated Example
-```
+```bash
 #!/bin/bash
 
 usage () {
@@ -79,7 +82,7 @@ commonly isolated into its own function.
 ### While Loop
 #### Example 
 Print number from 1 to $1.  
-```
+```bash
 #!/bin/bash
 x=1
 while [ ${x} -le $1 ]; do
@@ -97,7 +100,7 @@ Rename all .C files to .cc. The command to rename a file is
 `mv Hello.C Hello.cc`, and with consumed arguments, you can do
 `mv ${filename} ${filename%C}cc`
 
-```
+```bash
 #!/bin/bash
 for filename in *.C; do
 		mv ${filename} ${filename%C}cc
@@ -107,7 +110,7 @@ done
 #### Example 2
 How many times does $1 occur in $2?
 
-```
+```bash
 count=0
 for word in `cat $2`; do
 		if [ $word = "$1" ]; then
@@ -121,7 +124,7 @@ echo ${count}
 Print the day getting paid of the month, which is the last Firday
 of the month. You can use `awk`.
 
-```
+```bash
 echo `cal | awk '{print $6}' | grep "[0-9]" | tail -1`
 ```
 
