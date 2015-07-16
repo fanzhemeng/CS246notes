@@ -12,7 +12,7 @@
 10. [Lecture 10](lecture10.md)  Dynamic Memory, More Review, Operator Overloading, Preprocessor
 11. [Lecture 11](lecture11.md)  Preprocessor Classes
 12. [Lecture 12](lecture12.md)  Include Guards, C++ Classes
-(*13.  [Lecture 13](lecture13.md)  *)
+13. [Lecture 13](lecture13.md)  Missing due to interview
 14. [Lecture 14](lecture14.md)  Destructors, Separate Compilation, Assignment Operator
 15. [Lecture 15](lecture15.md)  Opeator=, Operator Overloading as methods, const methods, static
 16. [Lecture 16](lecture16.md)  Static Keyword, Design Pattern: Singleton, Encapsulation: public/private, class
